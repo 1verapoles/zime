@@ -1,0 +1,166 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0 !important;
+  zoom: 1;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  /*overflow-x: hidden;*/
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  background: #444;
+}
+
+.skew-right {
+  height: 50px;
+  width: 310px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-right: none;
+  margin-right: 50px;
+  border-left: none;
+  margin-left: 50px;
+  margin-top: 30px;
+  position: relative;
+  left: 62px;
+  background: #ccc;
+}
+.skew-right::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -22px;
+  width: 43px;
+  transform: skew(-40deg);
+  border: 1px solid #fff;
+  border-left: none;
+  background: #ccc;
+}
+
+.skew-right::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -22px;
+  width: 43px;
+  transform: skew(140deg);
+  border: 1px solid #fff;
+  border-right: none;
+  background: #ccc;
+}
+
+.inp {
+  height: 35px;
+  width: 200px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 43px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  /* padding-right: 50px; */
+  background: #ccc;
+}
+
+i {
+  margin-right: 7px;
+}
+
+.skew-btn {
+  height: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  border-right: none;
+  margin-right: 50px;
+  border-left: none;
+  margin-left: 50px;
+  margin-top: 30px;
+  position: relative;
+  top: -1px;
+  background: red;
+  cursor: pointer;
+}
+
+.skew-btn::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -22px;
+  width: 43px;
+  transform: skew(-40deg);
+  border: 1px solid #fff;
+  border-left: none;
+  background: red;
+}
+
+.skew-btn::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -22px;
+  width: 43px;
+  transform: skew(140deg);
+  border: 1px solid #fff;
+  border-right: none;
+  background: red;
+}
+
+@media screen and (max-width: 767px) {
+  .skew-right::after,
+  .skew-right::before,
+  .skew-btn::after,
+  .skew-btn::before {
+    display: none;
+  }
+
+  .skew-right,
+  .skew-btn {
+    border: 1px solid #fff;
+  }
+
+  .skew-right {
+    margin-left: 10px;
+    margin-right: 0;
+    width: 150px;
+    left: 4px;
+  }
+
+  .inp {
+    margin-left: 3px;
+    width: 130px;
+  }
+
+  .skew-btn {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
